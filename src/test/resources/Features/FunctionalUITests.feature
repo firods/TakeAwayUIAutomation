@@ -6,6 +6,7 @@ Feature: Food Delivery Feature
   Scenario: verify restaurant not deliver food when order is not in same city
     Given User completed the initial setup
     When User search and select restaurant name
+    And User select menu "Burgers" from navigation bar
     And User add order into basket
     And User enter incorrect city information
     And User enter personal information

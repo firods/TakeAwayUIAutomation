@@ -33,11 +33,13 @@ public class restaurantPage {
 	}
 	public static void getAddToBasket()
 	{
-		List<WebElement> burgers = Steps.driver.findElements(By.xpath("//div[@data-qa='item-element' and @role='button']"));
+		List<WebElement> burgers = Steps.driver.findElements(By.xpath("//section[@data-category-hash='category_burgers'] //*[@role='listitem']"));
+
 		for(WebElement add:burgers)
 		{
 			add.click();
-			break;
+			restaurantPage.getaddItemChoice().click();
+			break;			
 		}
 	}
 	public static WebElement getCheckOutBtn()
@@ -100,11 +102,15 @@ public class restaurantPage {
 	{
 		return Steps.driver.findElement(By.xpath("//span[@data-qa='header-country-and-language-selector-action-toggle']"));
 	}
+	public static WebElement getaddItemChoice()
+	{
+		return Steps.driver.findElement(By.xpath("//button[@data-qa='item-choices-action-submit']"));
+	}
 	public static WebDriver getCountry(WebDriver driver,String CountryName) throws InterruptedException
 	{
 		restaurantPage.getCountrySelector().click();
 		common.waitForTime();
-		
+
 		List<WebElement> countries = Steps.driver.findElements(By.xpath("//div[@data-qa='header-country-and-language-selector-panel']//* [@data-qa='country']"));
 
 		for(WebElement country:countries)
