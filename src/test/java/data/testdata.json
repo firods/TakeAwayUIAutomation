@@ -1,0 +1,14 @@
+{
+		"streetName": "main street",
+		"streetNo": "2415",
+		"postalCode": "8888AA",
+		"validpostalCode": "1061MB",
+		"url": "https://www.testurl.com",
+		"incorrectCity": "Enshede",
+		"correctCity": "Amsterdam",
+		"fullName": "TestUser",
+		"email": "testuser@test.test",
+		"phoneNo": "1234567890",
+		"restaurantName":"BRT Cypress Test Restaurant",
+		"errorMsg":"BRT Cypress Test Restaurant does not deliver in the delivery area 8888AA"
+}
